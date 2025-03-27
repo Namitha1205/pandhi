@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n,head,seek_time=0,i;
+	printf("enter the no of request :");
+	scanf("%d",&n);
+	int req[n];
+	printf("enter the sequence :");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&req[i]);
+	}
+	printf("enter the head position :");
+	scanf("%d",&head);
+	printf("sequence :");
+	for(i=0;i<n;i++)
+	{
+		printf("%d ",req[i]);
+		seek_time+=abs(req[i]-head);
+		head=req[i];
+	}
+	printf("seek time : %d",seek_time);
+	return 0;
+}
+5
+98 183 37 122 14
+53
